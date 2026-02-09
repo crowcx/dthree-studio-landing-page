@@ -18,18 +18,20 @@
     <meta property="og:type" content="article" />
     <meta property="og:description" content="Website resmi Dthree Studio | Palangka Raya" />
     <title>Dthree Studio | Studio Foto Palangka Raya</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styleG.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel=stylesheet href="style.css">
     <link rel="shortcut icon" href="asset/icont.jpg" type="image/x-icon">
 </head>
-<body class="bg-[#FDFBF7] text-[#4A3728]"> <header class="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md shadow-sm border-b border-[#EADDCA]">
+<body class="bg-[#FDFBF7] text-[#4A3728]">
+    <div id="menu-overlay" class="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0"></div>
+    <header class="fixed w-full z-50 bg-[#FDFBF7]/90 backdrop-blur-md shadow-sm border-b border-[#EADDCA]">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-extrabold tracking-tighter text-[#634832]">DTHREE STUDIO</a>
+            <a href="/" class="text-2xl font-extrabold tracking-tighter text-[#634832]">DTHREE STUDIO</a>
             
             <div class="hidden md:flex space-x-8 font-semibold text-[#826A56]">
-                <a href="pricelist.html" class="hover:text-[#634832] transition">Price List</a>
-                <a href="galeri.html" class="hover:text-[#634832] transition">Gallery</a>
+                <a href="pricelist" class="hover:text-[#634832] transition">Price List</a>
+                <a href="galeri" class="hover:text-[#634832] transition">Gallery</a>
                 <a href="#contact" class="hover:text-[#634832] transition">Kontak</a>
             </div>
 
@@ -39,8 +41,8 @@
         </nav>
 
         <div id="mobile-menu" class="absolute top-full left-0 w-full bg-[#FDFBF7] border-t border-[#EADDCA] px-6 py-6 space-y-4 shadow-xl opacity-0 -translate-y-4 pointer-events-none transition-all duration-300 ease-in-out">
-            <a href="pricelist.html" class="block font-semibold text-[#826A56] hover:text-[#634832] text-lg">Price List</a>
-            <a href="galeri.html" class="block font-semibold text-[#826A56] hover:text-[#634832] text-lg">Gallery</a>
+            <a href="pricelist" class="block font-semibold text-[#826A56] hover:text-[#634832] text-lg">Price List</a>
+            <a href="galeri" class="block font-semibold text-[#826A56] hover:text-[#634832] text-lg">Gallery</a>
             <a href="#contact" class="block font-semibold text-[#826A56] hover:text-[#634832] text-lg">Kontak</a>
             <hr class="border-[#EADDCA]">
             <div class="flex space-x-4 pt-2">
@@ -63,7 +65,7 @@
             </p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
                 <a href="#gallery" class="bg-[#826A56] hover:bg-[#634832] px-10 py-4 rounded-full font-bold transition shadow-lg">Lihat Galeri</a>
-                <a href="pricelist.html" class="bg-[#FDFBF7] text-[#634832] hover:bg-[#EADDCA] px-10 py-4 rounded-full font-bold transition shadow-lg">Lihat Paket</a>
+                <a href="pricelist" class="bg-[#FDFBF7] text-[#634832] hover:bg-[#EADDCA] px-10 py-4 rounded-full font-bold transition shadow-lg">Lihat Paket</a>
             </div>
         </div>
     </section>
@@ -94,7 +96,7 @@
             </div>
         </div>
         <div class="text-center">
-            <a href="galeri.html">
+            <a href="galeri">
             <button class="bg-transparent border-2 border-[#826A56] text-[#826A56] px-12 py-3 rounded-full font-bold hover:bg-[#826A56] hover:text-white transition">Lihat Semua Galeri</button>
             </a>
         </div>
@@ -108,27 +110,27 @@
             </div>
             <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
                 <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-[#C19A6B]">
-                    <img src="https://i.pravatar.cc/150?u=1" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
+                    <img src="asset/default.png" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
                     <h4 class="font-bold text-center text-[#634832] text-sm">Kingdom Alams</h4>
                     <p class="text-xs text-[#826A56] text-center italic mt-2">"Rekomended Studio Foto, Petugasnya ramah, harga bersahabat, dan hasil nya memuaskan."</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-[#C19A6B]">
-                    <img src="https://i.pravatar.cc/150?u=2" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
+                    <img src="asset/default.png" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
                     <h4 class="font-bold text-center text-[#634832] text-sm">Pasha Ramadhan</h4>
                     <p class="text-xs text-[#826A56] text-center italic mt-2">"Pelayanan terbaik ramah dan tercepat di seluruh palangkaraya mau pun di luar kota"</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-[#C19A6B]">
-                    <img src="https://i.pravatar.cc/150?u=3" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
+                    <img src="asset/default.png" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
                     <h4 class="font-bold text-center text-[#634832] text-sm">Bobby Rahmansyah</h4>
                     <p class="text-xs text-[#826A56] text-center italic mt-2">"Pelayanannya bagus, hasil bagus dan cepat "</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-[#C19A6B]">
-                    <img src="https://i.pravatar.cc/150?u=4" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
+                    <img src="asset/default.png" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
                     <h4 class="font-bold text-center text-[#634832] text-sm">Yulika Kristiana</h4>
                     <p class="text-xs text-[#826A56] text-center italic mt-2">"Good banget, nikahan sama prewedding disini jadi aman"</p>
                 </div>
                 <div class="bg-white p-6 rounded-2xl shadow-sm border-b-4 border-[#C19A6B]">
-                    <img src="https://i.pravatar.cc/150?u=5" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
+                    <img src="asset/default.png" class="w-16 h-16 rounded-full mx-auto mb-4 border-2 border-[#EADDCA]">
                     <h4 class="font-bold text-center text-[#634832] text-sm">Yusmice Hatniaty</h4>
                     <p class="text-xs text-[#826A56] text-center italic mt-2">"Pelayanan cepat, harga murah, ramah lagi"</p>
                 </div>
@@ -139,29 +141,36 @@
     <section id="price" class="py-24 text-center bg-white">
         <h3 class="text-3xl font-bold text-[#634832] mb-8 uppercase tracking-widest">Abadikan Momen Anda</h3>
         <div class="flex flex-wrap justify-center gap-6">
-            <a href="pricelist.html"><button class="bg-[#F5EFE6] text-[#634832] px-12 py-5 rounded-full font-extrabold hover:bg-[#EADDCA] transition shadow-md">LIHAT HARGA</button></a>
-            <a href="booking.html"><button class="bg-[#634832] text-white px-12 py-5 rounded-full font-extrabold hover:bg-[#4A3728] shadow-xl shadow-stone-200 transition tracking-wider">BOOKING SEKARANG</button></a>
+            <a href="pricelist"><button class="bg-[#F5EFE6] text-[#634832] px-12 py-5 rounded-full font-extrabold hover:bg-[#EADDCA] transition shadow-md">LIHAT HARGA</button></a>
+            <a href="booking"><button class="bg-[#634832] text-white px-12 py-5 rounded-full font-extrabold hover:bg-[#4A3728] shadow-xl shadow-stone-200 transition tracking-wider">BOOKING SEKARANG</button></a>
         </div>
     </section>
 
     <section id="contact" class="py-24 bg-[#FDFBF7]">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div>
-                <h3 class="text-4xl font-extrabold text-[#634832] mb-8">Hubungi Kami</h3>
-                <div class="space-y-6">
-                    <a href="https://wa.me/6281322699098" class="flex items-center space-x-6 bg-[#25D366] text-white p-5 rounded-2xl hover:scale-105 transition transform">
-                        <i class="fa-brands fa-whatsapp text-3xl"></i>
-                        <span class="font-bold text-xl">WhatsApp CS 1</span>
-                    </a>
-                    <a href="https://wa.me/6282352059520" class="flex items-center space-x-6 bg-[#25D366] text-white p-5 rounded-2xl hover:scale-105 transition transform">
-                        <i class="fa-brands fa-whatsapp text-3xl"></i>
-                        <span class="font-bold text-xl">WhatsApp CS 2</span>
-                    </a>
-                    <a href="https://instagram.com/dthree_studio" class="flex items-center space-x-6 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white p-5 rounded-2xl hover:scale-105 transition transform">
-                        <i class="fa-brands fa-instagram text-3xl"></i>
-                        <span class="font-bold text-xl">Instagram @dthree_studio</span>
-                    </a>
-                </div>
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        
+        <div>
+            <h3 class="text-4xl font-extrabold text-[#634832] mb-8">Hubungi Kami</h3>
+            <div class="space-y-6">
+                <a href="https://wa.me/6281322699098" class="flex items-center space-x-6 bg-[#25D366] text-white p-5 rounded-2xl hover:scale-105 transition transform">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                    <span class="font-bold text-xl">WhatsApp CS 1</span>
+                </a>
+                <a href="https://wa.me/6282352059520" class="flex items-center space-x-6 bg-[#25D366] text-white p-5 rounded-2xl hover:scale-105 transition transform">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i>
+                    <span class="font-bold text-xl">WhatsApp CS 2</span>
+                </a>
+                <a href="https://instagram.com/dthree_studio" class="flex items-center space-x-6 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white p-5 rounded-2xl hover:scale-105 transition transform">
+                    <i class="fa-brands fa-instagram text-3xl"></i>
+                    <span class="font-bold text-xl">Instagram @dthree_studio</span>
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <div class="mb-6 text-center md:text-left">
+                <h3 class="text-2xl font-extrabold text-[#634832] mb-1">Lokasi Studio Kami</h3>
+                <p class="text-[#826A56] font-medium italic">Buka setiap hari dari jam 07.30 - 20.30</p>
             </div>
             <div class="h-80 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
                 <iframe 
@@ -169,7 +178,12 @@
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
+            <div class="flex flex-col md:flex-row gap-4 m-4 justify-center">
+            <a href="https://www.google.com/maps/place/DTHREE+FOTO+STUDIO/@-2.193813,113.8972622,14z/data=!4m6!3m5!1s0x2dfcb3dfa2ff51e5:0x1d5aa275e554c420!8m2!3d-2.1887494!4d113.8901679!16s%2Fg%2F11qqgb0fd6?entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D"><button class="bg-[#634832] text-white px-10 py-4 rounded-full font-extrabold hover:bg-[#4A3728] shadow-xl shadow-stone-200 transition tracking-wider w-full md:w-auto uppercase text-center">Buka di Google Maps</button></a>
+            </div>
         </div>
+
+    </div>
     </section>
 
     <footer class="py-12 border-t border-[#EADDCA] bg-white">

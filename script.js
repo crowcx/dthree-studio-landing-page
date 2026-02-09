@@ -1,10 +1,55 @@
 const btn = document.getElementById('menu-btn');
 const menu = document.getElementById('mobile-menu');
-btn.addEventListener('click', () => {
+const icon = document.getElementById('menu-icon');
+const overlay = document.getElementById('menu-overlay');
+
+function toggleMenu() {
     const isOpen = menu.classList.contains('opacity-100');
-    menu.className = isOpen ? 
-        "absolute top-full left-0 w-full bg-[#FDFBF7] border-t border-[#EADDCA] px-6 py-6 space-y-4 shadow-xl opacity-0 -translate-y-4 pointer-events-none transition-all duration-300" :
-        "absolute top-full left-0 w-full bg-[#FDFBF7] border-t border-[#EADDCA] px-6 py-6 space-y-4 shadow-xl opacity-100 translate-y-0 pointer-events-auto transition-all duration-300";
+
+    if (isOpen) {
+        // TAMPILAN TUTUP
+        menu.classList.replace('opacity-100', 'opacity-0');
+        menu.classList.replace('translate-y-0', '-translate-y-4');
+        menu.classList.replace('pointer-events-auto', 'pointer-events-none');
+        
+        // Sembunyikan Overlay
+        overlay.classList.replace('opacity-100', 'opacity-0');
+        setTimeout(() => overlay.classList.add('hidden'), 300);
+        
+        // Ganti Ikon ke Hamburger
+        icon.classList.replace('fa-xmark', 'fa-bars');
+        
+        // Izinkan scroll kembali
+        document.body.style.overflow = 'auto';
+    } else {
+        // TAMPILAN BUKA
+        menu.classList.replace('opacity-0', 'opacity-100');
+        menu.classList.replace('-translate-y-4', 'translate-y-0');
+        menu.classList.replace('pointer-events-none', 'pointer-events-auto');
+        
+        // Tampilkan Overlay
+        overlay.classList.remove('hidden');
+        setTimeout(() => overlay.classList.replace('opacity-0', 'opacity-100'), 10);
+        
+        // Ganti Ikon ke X
+        icon.classList.replace('fa-bars', 'fa-xmark');
+        
+        // Kunci scroll agar tidak bisa scroll layar belakang
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+// Event Listener untuk tombol
+btn.addEventListener('click', toggleMenu);
+
+// Event Listener untuk klik pada bagian blur (overlay)
+overlay.addEventListener('click', toggleMenu);
+
+// Menutup menu jika salah satu link diklik
+document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        if(menu.classList.contains('opacity-100')) toggleMenu();
+    });
 });
 
 
@@ -81,7 +126,7 @@ function switchCategory(cat) {
                         <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> ${pkg.print}</li>
                         <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> ${pkg.softfile}</li>
                     </ul>
-                    <a href="booking.html"><button class="w-full bg-[#634832] text-white py-4 rounded-2xl font-bold hover:bg-[#4A3728] transition uppercase text-xs tracking-widest">
+                    <a href="booking"><button class="w-full bg-[#634832] text-white py-4 rounded-2xl font-bold hover:bg-[#4A3728] transition uppercase text-xs tracking-widest">
                         Pilih Paket ${pkg.name}
                     </button></a>
                 </div>
